@@ -27,7 +27,9 @@ subs = subs.astype(int)
 
 vals = numpy.hstack([data[:,2], data[:, 3]])
 vals = vals.flatten()
+vals = [[x] for i,x in enumerate(vals)]
 vals = numpy.array(vals)
+
 
 spten2 = sptensor.sptensor(subs, vals)
 print spten2.shape
